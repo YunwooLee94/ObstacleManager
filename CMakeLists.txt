@@ -6,10 +6,11 @@ set(SOURCE_FOLDERS "obstacle_manager" "object_state")
 
 # Uncomment the below if you want to other directory (default: /usr/local)
 # set(CMAKE_INSTALL_PREFIX ${CMAKE_CURRENT_SOURCE_DIR}/install)
-find_package(PCL 1.13 REQUIRED)
+find_package(PCL  REQUIRED)
 include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
 find_package(BernsteinPolynomialUtil REQUIRED)
+
 
 file(
   GLOB PROJECT_SUBFOLDERS
