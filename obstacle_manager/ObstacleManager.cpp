@@ -1,9 +1,9 @@
 #include "ObstacleManager.hpp"
 
-void ObstacleManager::SetStructuredObstacle(vector<ObjectState> structured_obstacle_list_)
+void ObstacleManager::SetStructuredObstacle(const vector<ObjectState> &structured_obstacle_list_)
 {
     structured_obstacle_list.clear();
-    if(structured_obstacle_list_.empty()){
+    if(not structured_obstacle_list_.empty()){
         SetTimeInterval(structured_obstacle_list_[0].time_stamp);
         StatePoly temp_state;
         temp_state.px.SetTimeInterval(this->time_interval);
@@ -30,6 +30,4 @@ void ObstacleManager::SetStructuredObstacle(vector<ObjectState> structured_obsta
             structured_obstacle_list.push_back(temp_state);
         }
     }
-    
-
 }
